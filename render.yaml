@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: truthlens-backend
+    env: python
+    region: oregon
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false          # Set manually in the Render dashboard
+      - key: EMBEDDING_MODEL
+        value: sentence-transformers/all-MiniLM-L6-v2
+      - key: CHROMA_PERSIST_DIR
+        value: /opt/render/project/src/chroma_db
+      - key: PYTHONUNBUFFERED
+        value: "1"

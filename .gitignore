@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment
+.env
+*.env.local
+
+# ChromaDB data
+chroma_db/
+*.chroma
+
+# Node / Frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+.vercel/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+*.log
+
+backend/.env
+frontend/.env
+.venv/
+__pycache__/
+chroma_db/
